@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>linked-in-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1192.000000, -26.000000)" fill-rule="nonzero" id="Header">
+            <g>
+                <g id="Nav" transform="translate(847.000000, 0.000000)">
+                    <path d="M363,26 L345,26 L345,44 L363,44 L363,26 Z M351,40 L348.477,40 L348.477,33 L351,33 L351,40 Z M349.694,31.717 C348.923,31.717 348.408,31.203 348.408,30.517 C348.408,29.831 348.922,29.317 349.779,29.317 C350.55,29.317 351.065,29.831 351.065,30.517 C351.065,31.203 350.551,31.717 349.694,31.717 Z M360,40 L357.558,40 L357.558,36.174 C357.558,35.116 356.907,34.872 356.663,34.872 C356.419,34.872 355.605,35.035 355.605,36.174 C355.605,36.337 355.605,40 355.605,40 L353.082,40 L353.082,33 L355.605,33 L355.605,33.977 C355.93,33.407 356.581,33 357.802,33 C359.023,33 360,33.977 360,36.174 L360,40 Z" id="linked-in-icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
