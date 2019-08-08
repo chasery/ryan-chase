@@ -1,5 +1,5 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 import styledNormalize from "styled-normalize";
 
 import Header from "./Header";
@@ -12,18 +12,28 @@ const GlobalStyle = createGlobalStyle`
     ${styledNormalize}
 
     body {
-        background-color: #50E3C2;
-        font-family: 'Nunito Sans', sans-serif;
+        background-color: ${props => props.theme.turquoise};
+        color: ${props => props.theme.mineShaft};
+        font-family: ${props => props.theme.font};
         font-weight: 300;
     }
 `;
 
-const App = () => {
+const theme = {
+    turquoise: "#50E3C2",
+    mineShaft: "#333333",
+    white: "#ffffff",
+    font: "'Nunito Sans', sans-serif"
+};
+
+const App = props => {
     return (
-        <div className="App">
-            <GlobalStyle />
-            <Header />
-        </div>
+        <ThemeProvider theme={theme}>
+            <React.Fragment>
+                <GlobalStyle />
+                <Header />
+            </React.Fragment>
+        </ThemeProvider>
     );
 };
 
