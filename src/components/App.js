@@ -23,10 +23,15 @@ const theme = {
     turquoise: "#50E3C2",
     mineShaft: "#333333",
     white: "#ffffff",
-    font: "'Nunito Sans', sans-serif"
+    font: "'Nunito Sans', sans-serif",
+    spacingSm: ".5rem", // 8px
+    spacingReg: ".75rem", // 12px
+    spacingMed: "1.5rem", // 24px
+    spacingLrg: "3rem", // 48px
+    spacingXlrg: "4rem" // 64px
 };
 
-const App = props => {
+const App = () => {
     return (
         <ThemeProvider theme={theme}>
             <React.Fragment>
