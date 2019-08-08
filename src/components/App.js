@@ -17,6 +17,11 @@ const GlobalStyle = createGlobalStyle`
         font-family: ${props => props.theme.font};
         font-weight: 300;
     }
+
+    ::selection {
+        color: ${props => props.theme.mineShaft}; 
+        background: ${props => props.theme.turquoise};
+    }
 `;
 
 const theme = {
