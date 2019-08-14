@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="14px" viewBox="0 0 20 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>menu-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1277.000000, -27.000000)" fill="#333333" fill-rule="nonzero" id="Header">
+            <g>
+                <path d="M1277,27 L1277,29 L1297,29 L1297,27 L1277,27 Z M1277,33 L1277,35 L1297,35 L1297,33 L1277,33 Z M1277,39 L1277,41 L1297,41 L1297,39 L1277,39 Z" id="menu-icon"></path>
+            </g>
+        </g>
+    </g>
+</svg>
