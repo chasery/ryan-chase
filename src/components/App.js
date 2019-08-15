@@ -2,7 +2,7 @@ import React from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import styledNormalize from "styled-normalize";
 
-import Header from "./header/Header";
+import Header from "./Header/Header";
 
 /**
  * Normalizing and setting Global Styles of App

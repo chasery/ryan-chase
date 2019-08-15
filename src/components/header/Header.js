@@ -20,6 +20,7 @@ const HeaderContent = styled.div`
     padding: 0 0.625rem 0 1.25rem;
 
     @media (max-width: ${props => props.theme.breakSm}) {
+        padding: 0 0 0 1.25rem;
         width: ${props => props.theme.contentSm};
     }
     @media (min-width: ${props =>

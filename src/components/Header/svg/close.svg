@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>close-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1363.000000, -24.000000)" fill-rule="nonzero" id="Header">
+            <g>
+                <polygon id="close-icon" points="1364.70703 24.2929688 1363.29297 25.7070312 1370.58594 33 1363.29297 40.292969 1364.70703 41.707031 1372 34.414062 1379.29297 41.707031 1380.70703 40.292969 1373.41406 33 1380.70703 25.7070312 1379.29297 24.2929688 1372 31.585938"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
