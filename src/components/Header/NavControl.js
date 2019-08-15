@@ -37,7 +37,7 @@ const TextLink = styled.button`
     }
 `;
 const IconLink = styled(TextLink)`
-    border: none;
+    border-color: transparent;
     display: flex;
     padding: 0.25rem 0.625rem;
     text-decoration: none;
@@ -54,14 +54,14 @@ const IconLink = styled(TextLink)`
     }
     &:hover,
     &:focus {
-        border: none;
+        border-color: transparent;
 
         svg g {
             fill: ${props => props.theme.turquoise};
         }
     }
     @media (max-width: ${props => props.theme.breakSm}) {
-        border: none;
+        border-color: transparent;
         align-items: center;
         padding: 0 1.25rem;
 

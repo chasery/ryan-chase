@@ -20,24 +20,25 @@ const NavContent = styled.nav`
     display: flex;
 
     @media (max-width: ${props => props.theme.breakSm}) {
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: ${props => props.theme.white};
         flex-direction: column;
-        height: ${props => (props.navIsOpen ? "100vh" : "0")};
+        height: 100vh;
+        opacity: ${props => (props.navIsOpen ? "1" : "0")};
         position: absolute;
         right: 0;
         top: 0;
-        width: ${props => (props.navIsOpen ? "100vw" : "0")};
-        visibility: ${props => (props.navIsOpen ? "visible" : "hidden")};
-        -webkit-backdrop-filter: blur(4rem);
-        -moz-backdrop-filter: blur(4rem);
-        -o-backdrop-filter: blur(4rem);
-        -ms-backdrop-filter: blur(4rem);
-        backdrop-filter: blur(4rem);
+        width: 100vw;
+
+        -webkit-transition: opacity 0.5s;
+        -moz-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
+        -ms-transition: opacity 0.5s;
+        transition: opacity 0.5s;
     }
 `;
 const NavHeader = styled.div`
     align-items: center;
-    border-bottom: 0.0625rem solid ${props => props.theme.mineShaft};
+    box-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.1);
     display: none;
     flex-basis: 3.25rem;
     margin-bottom: ${props => props.theme.spacingSm};
