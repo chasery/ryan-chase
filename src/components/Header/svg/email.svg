@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>email-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1230.000000, -27.000000)" fill-rule="nonzero" id="Header">
+            <g>
+                <g id="Nav" transform="translate(847.000000, 0.000000)">
+                    <path d="M403,27 L383,27 L383,43 L403,43 L403,27 Z M401,31 L393,36 L385,31 L385,29 L393,34 L401,29 L401,31 Z" id="email-icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

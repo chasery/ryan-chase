@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="28px" viewBox="0 0 26 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-130.000000, -22.000000)" id="Header">
+            <g>
+                <g id="Group" transform="translate(130.000000, 22.000000)">
+                    <path d="M5.6,14 L5.6,28 L3.90798505e-14,28 L3.90798505e-14,14 C3.90798505e-14,6.2680135 6.2680135,0 14,0 C19.0973033,0 23.5583506,2.72413542 26.0067098,6.7959741 L21.2040259,9.67758446 C19.7350104,7.23448125 17.058382,5.6 14,5.6 C9.3608081,5.6 5.6,9.3608081 5.6,14 Z" id="Path" fill="#333333"></path>
+                    <path d="M8.4,20.2610982 C9.88611818,21.59121 11.8486076,22.4 14,22.4 C17.058382,22.4 19.7350104,20.7655187 21.2040259,18.3224155 L26.0067098,21.2040259 C23.5583506,25.2758646 19.0973033,28 14,28 C12.0089068,28 10.1148946,27.584347 8.4,26.8350777 L8.4,20.2610982 Z" id="Path" fill="#50E3C2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
