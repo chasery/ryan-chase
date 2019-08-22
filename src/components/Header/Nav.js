@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import NavControl from "./NavControl";
@@ -27,13 +27,14 @@ const NavContent = styled.nav`
         position: absolute;
         right: 0;
         top: 0;
+        visibility: ${props => (props.navIsOpen ? "visible" : "hidden")};
         width: 100vw;
 
-        -webkit-transition: opacity 0.5s;
-        -moz-transition: opacity 0.5s;
-        -o-transition: opacity 0.5s;
-        -ms-transition: opacity 0.5s;
-        transition: opacity 0.5s;
+        -webkit-transition: visibility 0.5s, opacity 0.5s;
+        -moz-transition: visibility 0.5s, opacity 0.5s;
+        -o-transition: visibility 0.5s, opacity 0.5s;
+        -ms-transition: visibility 0.5s, opacity 0.5s;
+        transition: visibility 0.5s, opacity 0.5s;
     }
 `;
 const NavHeader = styled.div`
@@ -51,7 +52,7 @@ const NavHeader = styled.div`
         text-transform: lowercase;
     }
     & > svg {
-        margin-right: 1.25rem;
+        margin-right: ${props => props.theme.spacingMed};
     }
 
     @media (max-width: ${props => props.theme.breakSm}) {
@@ -75,12 +76,6 @@ const NavGroup = styled.div`
     align-items: center;
     display: flex;
 
-    & + h3 + div {
-        border-left: 0.0625rem solid ${props => props.theme.mineShaft};
-        margin: 1rem 0;
-        padding-left: 0.625rem;
-    }
-
     @media (max-width: ${props => props.theme.breakSm}) {
         align-items: stretch;
         flex-direction: column;
@@ -89,53 +84,103 @@ const NavGroup = styled.div`
         & + h3 + div {
             border-left: none;
             flex-direction: column-reverse;
-            margin: 0;
-            padding-left: 0;
+        }
+    }
+    @media (min-width: ${props => props.theme.breakSm}) {
+        & + h3 + div {
+            align-self: center;
+            border-left: 0.0625rem solid ${props => props.theme.mineShaft};
+            max-height: 1.75rem;
+            padding-left: 0.625rem;
         }
     }
 `;
 
-const Nav = props => {
+const Nav = () => {
+    const [navIsOpen, setNavIsOpen] = useState(false);
+
     return (
         <NavWrapper>
-            <NavControl type="menu" onClick={props.toggleMobileNav}>
+            <NavControl
+                type="menu"
+                onClick={() => setNavIsOpen(prevNavIsOpen => !prevNavIsOpen)}
+            >
                 <MenuIcon />
             </NavControl>
-            <NavContent navIsOpen={props.navIsOpen}>
+            <NavContent navIsOpen={navIsOpen}>
                 <NavHeader>
                     <Logo />
                     <h2>Menu</h2>
-                    <NavControl type="menu" onClick={props.toggleMobileNav}>
+                    <NavControl
+                        type="menu"
+                        onClick={() =>
+                            setNavIsOpen(prevNavIsOpen => !prevNavIsOpen)
+                        }
+                    >
                         <CloseIcon />
                     </NavControl>
                 </NavHeader>
                 <NavGroup>
-                    <NavControl type="text">About</NavControl>
-                    <NavControl type="text">Skills</NavControl>
-                    <NavControl type="text">Portfolio</NavControl>
+                    <NavControl
+                        type="app"
+                        to="About"
+                        onClick={() =>
+                            setNavIsOpen(prevNavIsOpen =>
+                                prevNavIsOpen ? !prevNavIsOpen : prevNavIsOpen
+                            )
+                        }
+                    >
+                        About
+                    </NavControl>
+                    <NavControl
+                        type="app"
+                        to="Skills"
+                        onClick={() =>
+                            setNavIsOpen(prevNavIsOpen =>
+                                prevNavIsOpen ? !prevNavIsOpen : prevNavIsOpen
+                            )
+                        }
+                    >
+                        Skills
+                    </NavControl>
+                    <NavControl
+                        type="app"
+                        to="Portfolio"
+                        onClick={() =>
+                            setNavIsOpen(prevNavIsOpen =>
+                                prevNavIsOpen ? !prevNavIsOpen : prevNavIsOpen
+                            )
+                        }
+                    >
+                        Portfolio
+                    </NavControl>
                 </NavGroup>
                 <NavSubHeader>Contact</NavSubHeader>
                 <NavGroup>
                     <NavControl
                         type="icon"
-                        as="a"
                         href="https://github.com/chasery/"
                         target="_blank"
                     >
-                        <GithubIcon />
+                        <div>
+                            <GithubIcon />
+                        </div>
                         <span>Github</span>
                     </NavControl>
                     <NavControl
                         type="icon"
-                        as="a"
                         href="https://www.linkedin.com/in/chasery"
                         target="_blank"
                     >
-                        <LinkedInIcon />
+                        <div>
+                            <LinkedInIcon />
+                        </div>
                         <span>LinkedIn</span>
                     </NavControl>
-                    <NavControl type="icon" as="a" href="mailto:test@test.com">
-                        <EmailIcon />
+                    <NavControl type="icon" href="mailto:test@test.com">
+                        <div>
+                            <EmailIcon />
+                        </div>
                         <span>E-mail</span>
                     </NavControl>
                 </NavGroup>

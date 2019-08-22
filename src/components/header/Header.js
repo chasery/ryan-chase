@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 import Nav from "./Nav";
 import { ReactComponent as Logo } from "./svg/ryan-chase-logo.svg";
@@ -8,8 +9,9 @@ const HeaderWrapper = styled.header`
     background-color: ${props => props.theme.white};
     box-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.1);
     display: flex;
-    left: 0;
+    flex-basis: 3.25rem;
     justify-content: center;
+    left: 0;
     position: fixed;
     width: 100vw;
     top: 0;
@@ -32,7 +34,7 @@ const HeaderContent = styled.div`
         width: ${props => props.theme.contentLrg};
     }
 `;
-const HeaderLogo = styled.a`
+const HeaderLogo = styled(Link)`
     align-items: center;
     display: flex;
     color: ${props => props.theme.mineShaft};
@@ -47,35 +49,18 @@ const HeaderLogo = styled.a`
     }
 `;
 
-class Header extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = { navIsOpen: false };
-    }
-
-    toggleMobileNav = () => {
-        this.setState(prevState => ({
-            navIsOpen: !prevState.navIsOpen
-        }));
-    };
-
-    render() {
-        return (
-            <HeaderWrapper>
-                <HeaderContent>
-                    <HeaderLogo href="/">
-                        <Logo />
-                        <div>Ryan Chase</div>
-                    </HeaderLogo>
-                    <Nav
-                        navIsOpen={this.state.navIsOpen}
-                        toggleMobileNav={this.toggleMobileNav}
-                    />
-                </HeaderContent>
-            </HeaderWrapper>
-        );
-    }
-}
+const Header = props => {
+    return (
+        <HeaderWrapper>
+            <HeaderContent>
+                <HeaderLogo to="Hero" smooth={true} duration={500}>
+                    <Logo />
+                    <div>Ryan Chase</div>
+                </HeaderLogo>
+                <Nav />
+            </HeaderContent>
+        </HeaderWrapper>
+    );
+};
 
 export default Header;
