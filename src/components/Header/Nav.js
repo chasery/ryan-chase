@@ -87,7 +87,7 @@ const NavGroup = styled.div`
             flex-direction: column-reverse;
         }
     }
-    @media (min-width: ${props => props.theme.breakSm}) {
+    @media (min-width: 48.0625rem) {
         & + h3 + div {
             align-self: center;
             border-left: 0.0625rem solid ${props => props.theme.mineShaft};

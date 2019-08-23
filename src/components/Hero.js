@@ -17,12 +17,12 @@ const HeroContent = styled.div`
         padding: 0;
         width: ${props => props.theme.contentSm};
     }
-    @media (min-width: ${props =>
-            props.theme.breakSm}) and (max-width: ${props =>
-            props.theme.breakLrg}) {
+    @media (min-width: calc(${props =>
+        props.theme.breakSm} + 1)) and (max-width: ${props =>
+    props.theme.breakLrg}) {
         width: ${props => props.theme.contentMed};
     }
-    @media (min-width: ${props => props.theme.breakLrg}) {
+    @media (min-width: calc(${props => props.theme.breakLrg} + 1)) {
         width: ${props => props.theme.contentLrg};
     }
 `;
@@ -63,7 +63,6 @@ const FeSpan = styled.span`
         color: ${props => props.theme.white};
         content: "&";
         display: none;
-        left: 100%;
         position: absolute;
         top: 0;
     }
@@ -79,9 +78,12 @@ const FeSpan = styled.span`
     @media (min-width: ${props =>
             props.theme.breakSm}) and (max-width: ${props =>
             props.theme.breakMed}) {
+        padding-right: 0;
+
         :after {
             display: block;
             font-size: 6rem;
+            left: 100%;
             padding-left: ${props => props.theme.spacingSm};
             top: ${props => props.theme.spacingXs};
         }

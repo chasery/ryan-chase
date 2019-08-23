@@ -43,7 +43,7 @@ const IconLink = styled.a`
             margin-left: ${props => props.theme.spacingSm};
         }
     }
-    @media (min-width: ${props => props.theme.breakSm}) {
+    @media (min-width: 48.0625rem) {
         align-self: stretch;
         padding: 0.25rem 0.625rem;
 
@@ -69,7 +69,7 @@ const MenuControl = styled(IconLink)`
             border: none;
         }
     }
-    @media (min-width: ${props => props.theme.breakSm}) {
+    @media (min-width: 48.0625rem) {
         padding: 0;
     }
 `;
@@ -98,7 +98,7 @@ const AppLink = styled(Link)`
             border-left: 0.25rem solid ${props => props.theme.turquoise};
         }
     }
-    @media (min-width: ${props => props.theme.breakSm}) {
+    @media (min-width: 48.0625rem) {
         align-self: stretch;
         border-top: 0.25rem solid transparent;
         padding: 0 1.25rem 0.25rem;
