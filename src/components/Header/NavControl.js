@@ -11,6 +11,11 @@ const IconLink = styled.a`
     text-transform: lowercase;
     text-decoration: none;
 
+    div {
+        display: flex;
+        flex-basis: 1.25rem;
+        justify-content: center;
+    }
     svg {
         align-self: center;
 
@@ -33,17 +38,12 @@ const IconLink = styled.a`
         flex-basis: 3.25rem;
         padding: 0 1.25rem;
 
-        div {
-            display: flex;
-            flex-basis: 1.25rem;
-            justify-content: center;
-        }
         span {
             align-self: center;
             margin-left: ${props => props.theme.spacingSm};
         }
     }
-    @media (min-width: ${props => props.theme.breakSm}) {
+    @media (min-width: 48.0625rem) {
         align-self: stretch;
         padding: 0.25rem 0.625rem;
 
@@ -53,6 +53,7 @@ const IconLink = styled.a`
     }
 `;
 const MenuControl = styled(IconLink)`
+    display: none;
     flex-basis: 3.25rem;
     justify-content: center;
     min-width: 3.25rem;
@@ -68,14 +69,11 @@ const MenuControl = styled(IconLink)`
             border: none;
         }
     }
-    @media (min-width: ${props => props.theme.breakSm}) {
-        display: none;
+    @media (min-width: 48.0625rem) {
         padding: 0;
     }
 `;
 const AppLink = styled(Link)`
-    background: transparent;
-    border: none;
     color: ${props => props.theme.mineShaft};
     display: flex;
     align-items: center;
@@ -100,7 +98,7 @@ const AppLink = styled(Link)`
             border-left: 0.25rem solid ${props => props.theme.turquoise};
         }
     }
-    @media (min-width: ${props => props.theme.breakSm}) {
+    @media (min-width: 48.0625rem) {
         align-self: stretch;
         border-top: 0.25rem solid transparent;
         padding: 0 1.25rem 0.25rem;

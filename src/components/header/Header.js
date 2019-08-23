@@ -13,7 +13,7 @@ const HeaderWrapper = styled.header`
     justify-content: center;
     left: 0;
     position: fixed;
-    width: 100vw;
+    width: 100%;
     top: 0;
     z-index: 10;
 `;
@@ -49,7 +49,7 @@ const HeaderLogo = styled(Link)`
     }
 `;
 
-const Header = props => {
+const Header = () => {
     return (
         <HeaderWrapper>
             <HeaderContent>
