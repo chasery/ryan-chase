@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+import useWindowSize from "../../hooks/useWindowSize";
 import NavControl from "./NavControl";
 import { ReactComponent as Logo } from "./svg/ryan-chase-logo.svg";
 import { ReactComponent as MenuIcon } from "./svg/menu.svg";
@@ -28,7 +29,7 @@ const NavContent = styled.nav`
         right: 0;
         top: 0;
         visibility: ${props => (props.navIsOpen ? "visible" : "hidden")};
-        width: 100vw;
+        width: ${props => props.width}px;
 
         -webkit-transition: visibility 0.5s, opacity 0.5s;
         -moz-transition: visibility 0.5s, opacity 0.5s;
@@ -98,6 +99,7 @@ const NavGroup = styled.div`
 
 const Nav = () => {
     const [navIsOpen, setNavIsOpen] = useState(false);
+    const size = useWindowSize();
 
     return (
         <NavWrapper>
@@ -107,7 +109,7 @@ const Nav = () => {
             >
                 <MenuIcon />
             </NavControl>
-            <NavContent navIsOpen={navIsOpen}>
+            <NavContent navIsOpen={navIsOpen} width={size.width}>
                 <NavHeader>
                     <Logo />
                     <h2>Menu</h2>

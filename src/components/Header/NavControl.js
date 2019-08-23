@@ -11,6 +11,11 @@ const IconLink = styled.a`
     text-transform: lowercase;
     text-decoration: none;
 
+    div {
+        display: flex;
+        flex-basis: 1.25rem;
+        justify-content: center;
+    }
     svg {
         align-self: center;
 
@@ -33,11 +38,6 @@ const IconLink = styled.a`
         flex-basis: 3.25rem;
         padding: 0 1.25rem;
 
-        div {
-            display: flex;
-            flex-basis: 1.25rem;
-            justify-content: center;
-        }
         span {
             align-self: center;
             margin-left: ${props => props.theme.spacingSm};
@@ -53,6 +53,7 @@ const IconLink = styled.a`
     }
 `;
 const MenuControl = styled(IconLink)`
+    display: none;
     flex-basis: 3.25rem;
     justify-content: center;
     min-width: 3.25rem;
@@ -69,13 +70,10 @@ const MenuControl = styled(IconLink)`
         }
     }
     @media (min-width: ${props => props.theme.breakSm}) {
-        display: none;
         padding: 0;
     }
 `;
 const AppLink = styled(Link)`
-    background: transparent;
-    border: none;
     color: ${props => props.theme.mineShaft};
     display: flex;
     align-items: center;

@@ -20,10 +20,11 @@ const GlobalStyle = createGlobalStyle`
         color: ${props => props.theme.mineShaft};
         font-family: ${props => props.theme.font};
         font-weight: 300;
+        overflow: none;
     }
 
     ::selection {
-        color: ${props => props.theme.mineShaft}; 
+        color: ${props => props.theme.white}; 
         background: ${props => props.theme.turquoise};
     }
 `;
