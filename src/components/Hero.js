@@ -17,12 +17,12 @@ const HeroContent = styled.div`
         padding: 0;
         width: ${props => props.theme.contentSm};
     }
-    @media (min-width: calc(${props =>
-        props.theme.breakSm} + 1)) and (max-width: ${props =>
-    props.theme.breakLrg}) {
+    @media (min-width: ${props =>
+            props.theme.breakSm}) and (max-width: ${props =>
+            props.theme.breakLrg}) {
         width: ${props => props.theme.contentMed};
     }
-    @media (min-width: calc(${props => props.theme.breakLrg} + 1)) {
+    @media (min-width: ${props => props.theme.breakLrg}) {
         width: ${props => props.theme.contentLrg};
     }
 `;
