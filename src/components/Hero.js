@@ -67,12 +67,13 @@ const FeSpan = styled.span`
         top: 0;
     }
     @media (max-width: ${props => props.theme.breakSm}) {
-        padding-right: 3rem;
+        padding-right: 3.25rem;
 
         :after {
             display: block;
-            font-size: 3.5rem;
-            left: 86%;
+            font-size: 4.25rem;
+            left: 84%;
+            top: -${props => props.theme.spacingSm};
         }
     }
     @media (min-width: ${props =>
@@ -82,10 +83,10 @@ const FeSpan = styled.span`
 
         :after {
             display: block;
-            font-size: 6rem;
+            font-size: 7.75rem;
             left: 100%;
             padding-left: ${props => props.theme.spacingSm};
-            top: ${props => props.theme.spacingXs};
+            top: -${props => props.theme.spacingSm};
         }
     }
 `;
