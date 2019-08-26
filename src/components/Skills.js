@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const SkillsWrapper = styled.section`
-    background-color: ${props => props.theme.turquoise};
     height: 100vh;
 `;
 
