@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { Picture } from "react-responsive-picture";
 
-import Photo from "./shared/Photo";
 import Section from "./shared/Section";
+
+import PhotoSm from "../assets/img/ryan-chase.png";
+import PhotoMed from "../assets/img/ryan-chase@2x.png";
+import PhotoLrg from "../assets/img/ryan-chase@3x.png";
 
 const AboutContent = styled.div`
     display: flex;
@@ -12,7 +16,10 @@ const AboutContent = styled.div`
     }
 `;
 const AboutText = styled.div`
-    @media (min-width: ${props => props.theme.breakMed}) {
+    @media (max-width: ${props => props.theme.breakSm}) {
+        padding-bottom: ${props => props.theme.spacingMed};
+    }
+    @media (min-width: ${props => props.theme.breakSm}) {
         padding-right: ${props => props.theme.spacingLrg};
     }
 `;
@@ -23,6 +30,17 @@ const AboutPhoto = styled.div`
 
     img {
         border-radius: 50%;
+        width: 100%;
+    }
+
+    @media (max-width: ${props => props.theme.breakSm}) {
+        display: flex;
+        justify-content: center;
+
+        picture {
+            align-self: center;
+            width: 75%;
+        }
     }
 `;
 
@@ -71,7 +89,18 @@ const About = props => {
                     </p>
                 </AboutText>
                 <AboutPhoto>
-                    <Photo path="/assets/img/" img="ryan-chase"></Photo>
+                    <Picture
+                        sources={[
+                            {
+                                srcSet: `${PhotoSm}, ${PhotoMed} 2x`,
+                                media: "(max-width: 768px)"
+                            },
+                            {
+                                srcSet: `${PhotoMed} 1x, ${PhotoLrg} 2x`
+                            }
+                        ]}
+                        alt="A photo of Ryan Chase in Astoria, Oregon"
+                    />
                 </AboutPhoto>
             </AboutContent>
         </Section>
