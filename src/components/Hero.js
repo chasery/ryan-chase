@@ -3,10 +3,15 @@ import styled from "styled-components";
 
 const HeroWrapper = styled.section`
     background-color: ${props => props.theme.turquoise};
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
     display: flex;
     justify-content: center;
     height: calc(100vh - 3.25rem);
     padding-top: 3.25rem;
+
+    @media (min-width: ${props => props.theme.breakMed}) {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
+    }
 `;
 const HeroContent = styled.div`
     display: flex;
@@ -17,12 +22,12 @@ const HeroContent = styled.div`
         padding: 0;
         width: ${props => props.theme.contentSm};
     }
-    @media (min-width: calc(${props =>
-        props.theme.breakSm} + 1)) and (max-width: ${props =>
-    props.theme.breakLrg}) {
+    @media (min-width: ${props =>
+            props.theme.breakSm}) and (max-width: ${props =>
+            props.theme.breakLrg}) {
         width: ${props => props.theme.contentMed};
     }
-    @media (min-width: calc(${props => props.theme.breakLrg} + 1)) {
+    @media (min-width: ${props => props.theme.breakLrg}) {
         width: ${props => props.theme.contentLrg};
     }
 `;
