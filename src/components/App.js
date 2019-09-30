@@ -63,7 +63,7 @@ const App = () => {
                 <Hero id="Hero" />
                 <About id="About" />
                 <Skills id="Skills" />
-                <Portfolio id="Portfolio" />
+                {/* <Portfolio id="Portfolio" /> */}
             </AppWrapper>
         </ThemeProvider>
     );
