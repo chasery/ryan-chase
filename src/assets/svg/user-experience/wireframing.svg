@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="18px" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>wireframing</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-559.000000, -2000.000000)" fill="#50E3C2" fill-rule="nonzero" id="Skills">
+            <g transform="translate(0.000000, 1612.000000)">
+                <g id="Tools-Grouping" transform="translate(182.000000, 345.000000)">
+                    <g id="Middle-Icons" transform="translate(376.000000, 0.000000)">
+                        <path d="M1,43 L1,59 L8,59 L8,61 L16,61 L16,59 L23,59 L23,43 L1,43 Z M3,45 L21,45 L21,57 L3,57 L3,45 Z M5,47 L5,50 L11,50 L11,47 L5,47 Z M13,47 L13,50 L19,50 L19,47 L13,47 Z M5,52 L5,55 L11,55 L11,52 L5,52 Z M13,52 L13,55 L19,55 L19,52 L13,52 Z" id="wireframing"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

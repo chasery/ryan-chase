@@ -76,6 +76,63 @@ const Skills = props => {
                             groups, resulting in the creation of the best
                             product possible.
                         </TabDescription>
+                        <h4>Languages & Frameworks</h4>
+                        <ul>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                HTML 5
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                CSS 3
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                JavaScript
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                Git
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                React
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                Redux
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                Styled-Components
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                Jest
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                Angular
+                            </li>
+                        </ul>
                     </Tab>
                     <Tab
                         className={
@@ -92,6 +149,57 @@ const Skills = props => {
                             you hear him exclaiming “That’s a bad user
                             experience!”
                         </TabDescription>
+                        <h4>Process</h4>
+                        <ul>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                Storyboarding
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                Personas
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                Journey Mapping
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                User Flows
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                Wireframing
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                Rapid Prototyping
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                User Testing
+                            </li>
+                            <li>
+                                <div>
+                                    <svg></svg>
+                                </div>{" "}
+                                Design Systems
+                            </li>
+                        </ul>
                     </Tab>
                 </TabsContentWrapper>
             </TabsWrapper>

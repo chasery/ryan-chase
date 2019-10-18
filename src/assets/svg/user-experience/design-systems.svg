@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="12px" viewBox="0 0 24 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>design-systems</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-933.000000, -1965.000000)" fill="#50E3C2" fill-rule="nonzero" id="Skills">
+            <g transform="translate(0.000000, 1612.000000)">
+                <g id="Tools-Grouping" transform="translate(182.000000, 345.000000)">
+                    <g id="Right-Icons" transform="translate(751.000000, 2.000000)">
+                        <path d="M24,6 L0,6 L0,18 L24,18 L24,6 Z M3,11 L3,8 L5,8 L5,11 L3,11 Z M7,13 L7,8 L9,8 L9,13 L7,13 Z M11,11 L11,8 L13,8 L13,11 L11,11 Z M15,13 L15,8 L17,8 L17,13 L15,13 Z M19,11 L19,8 L21,8 L21,11 L19,11 Z" id="design-systems"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
