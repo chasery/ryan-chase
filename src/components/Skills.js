@@ -24,6 +24,29 @@ import { ReactComponent as RapidPrototypingIcon } from "../assets/svg/user-exper
 import { ReactComponent as UserTestingIcon } from "../assets/svg/user-experience/user-testing.svg";
 import { ReactComponent as DesignSystemsIcon } from "../assets/svg/user-experience/design-systems.svg";
 
+const SkillsList = styled.ul`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: ${props => props.theme.spacingLrg};
+    grid-row-gap: 1rem;
+    margin: 0;
+    padding: 0;
+
+    li {
+        align-items: center;
+        display: flex;
+        list-style: none;
+    }
+`;
+const IconWrapper = styled.div`
+    align-items: center;
+    display: flex;
+    height: 1.5rem;
+    justify-content: center;
+    margin-right: ${props => props.theme.spacingXs}
+    width: 1.5rem;
+`;
+
 const Skills = props => {
     const [activeTab, setActiveTab] = useState("frontEnd");
 
@@ -38,64 +61,64 @@ const Skills = props => {
                         fosters a collaborative environment between the two
                         groups, resulting in the creation of the best product
                         possible."
-                    subHeader="Languages & Frameworks"
+                    subHeading="Languages & Frameworks"
                 >
-                    <ul>
+                    <SkillsList>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <Html5Icon />
-                            </div>{" "}
+                            </IconWrapper>
                             HTML 5
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <Css3Icon />
-                            </div>{" "}
+                            </IconWrapper>
                             CSS 3
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <JavaScriptIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             JavaScript
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <GitIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             Git
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <ReactIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             React
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <ReduxIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             Redux
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <StyledComponentsIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             Styled-Components
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <JestIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             Jest
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <AngularIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             Angular
                         </li>
-                    </ul>
+                    </SkillsList>
                 </Tab>
                 <Tab
                     title="User Experience"
@@ -106,58 +129,59 @@ const Skills = props => {
                     solutions. Ryan is very passionate about usability and
                     you shouldn’t be surprised if you hear him exclaiming
                     “That’s a bad user experience!”"
-                    subHeader="Process"
+                    subHeading="Process"
+                    style="display: none;"
                 >
-                    <ul>
+                    <SkillsList>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <StoryboradingIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             Storyboarding
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <PersonasIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             Personas
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <JourneyMappingIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             Journey Mapping
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <UserFlowsIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             User Flows
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <WireframingIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             Wireframing
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <RapidPrototypingIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             Rapid Prototyping
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <UserTestingIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             User Testing
                         </li>
                         <li>
-                            <div>
+                            <IconWrapper>
                                 <DesignSystemsIcon />
-                            </div>{" "}
+                            </IconWrapper>
                             Design Systems
                         </li>
-                    </ul>
+                    </SkillsList>
                 </Tab>
             </Tabs>
         </Section>
