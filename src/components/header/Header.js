@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 
 import Nav from "./Nav";
-import { ReactComponent as Logo } from "./svg/ryan-chase-logo.svg";
+import { ReactComponent as Logo } from "../../assets/svg/header/ryan-chase-logo.svg";
 
 const HeaderWrapper = styled.header`
     background-color: ${props => props.theme.white};
