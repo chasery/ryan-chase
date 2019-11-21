@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import Section from "./shared/Section";
-import Tabs from "./shared/Tabs/Tabs";
-import Tab from "./shared/Tabs/Tab";
+import Tabs from "./shared/Tabs";
 
 import { ReactComponent as Html5Icon } from "../assets/svg/front-end/html-5.svg";
 import { ReactComponent as Css3Icon } from "../assets/svg/front-end/css-3.svg";
@@ -48,12 +47,10 @@ const IconWrapper = styled.div`
 `;
 
 const Skills = props => {
-    const [activeTab, setActiveTab] = useState("frontEnd");
-
     return (
         <Section id={props.id}>
             <Tabs>
-                <Tab
+                <div
                     title="Front-End"
                     description="Ryan currently works as a senior UX Designer, where he
                         leads a team that drives an empathic approach to
@@ -119,8 +116,8 @@ const Skills = props => {
                             Angular
                         </li>
                     </SkillsList>
-                </Tab>
-                <Tab
+                </div>
+                <div
                     title="User Experience"
                     description="It’s that goal of finding the perfect solution for his
                     end users’, that motivates Ryan. Staying in tune with
@@ -130,7 +127,6 @@ const Skills = props => {
                     you shouldn’t be surprised if you hear him exclaiming
                     “That’s a bad user experience!”"
                     subHeading="Process"
-                    style="display: none;"
                 >
                     <SkillsList>
                         <li>
@@ -182,7 +178,7 @@ const Skills = props => {
                             Design Systems
                         </li>
                     </SkillsList>
-                </Tab>
+                </div>
             </Tabs>
         </Section>
     );
