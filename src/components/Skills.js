@@ -51,7 +51,8 @@ const Skills = props => {
         <Section id={props.id}>
             <Tabs>
                 <div
-                    title="Front-End"
+                    id="1"
+                    title="Front-End Development"
                     description="Ryan currently works as a senior UX Designer, where he
                         leads a team that drives an empathic approach to
                         software. His background in design and development
@@ -118,6 +119,7 @@ const Skills = props => {
                     </SkillsList>
                 </div>
                 <div
+                    id="2"
                     title="User Experience"
                     description="It’s that goal of finding the perfect solution for his
                     end users’, that motivates Ryan. Staying in tune with

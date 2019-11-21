@@ -6,7 +6,7 @@ const TabsWrapper = styled.div`
     flex-direction: column;
 `;
 const TabsContentWrapper = styled.div`
-    position: relative;
+    padding-top: ${props => props.theme.spacingLrg};
 `;
 const TabsControlWrapper = styled.div`
     display: grid;
@@ -32,10 +32,11 @@ const TabControl = styled.button`
     }
 `;
 const Tab = styled.div`
-    opacity: 1;
-    padding-top: ${props => props.theme.spacingLrg};
+    height: 0;
+    opacity: 0;
 
     &[class*="active"] {
+        height: auto;
         opacity: 1;
     }
 `;
@@ -43,36 +44,45 @@ const TabDescription = styled.p``;
 const TabSubHeading = styled.h4``;
 
 const Tabs = props => {
-    const [activeTab, setActiveTab] = useState("frontEnd");
+    const [activeTab, setActiveTab] = useState("1");
     const children = props.children;
 
-    const getTabControls = React.Children.map(children, child => {
-        if (child.props.title) {
-            return <TabControl>{child.props.title}</TabControl>;
-        }
+    const createTabs = React.Children.map(children, child => {
+        return (
+            <Tab
+                key={child.props.id}
+                id={child.props.id}
+                title={child.props.title}
+                className={activeTab === child.props.id ? "active" : null}
+            >
+                {child.props.description && (
+                    <TabDescription>{child.props.description}</TabDescription>
+                )}
+                {child.props.subHeading && (
+                    <TabSubHeading>{child.props.subHeading}</TabSubHeading>
+                )}
+                {child.props.children}
+            </Tab>
+        );
     });
-    const getTabs = React.Children.map(children, child => {
-        if (child.props.title) {
-            return (
-                <Tab>
-                    {child.props.description && (
-                        <TabDescription>
-                            {child.props.description}
-                        </TabDescription>
-                    )}
-                    {child.props.subHeading && (
-                        <TabSubHeading>{child.props.subHeading}</TabSubHeading>
-                    )}
-                    {child.props.children}
-                </Tab>
-            );
-        }
+
+    const createTabControls = createTabs.map(tab => {
+        console.log(tab);
+        return (
+            <TabControl
+                key={tab.props.id}
+                className={activeTab === tab.props.id ? "active" : null}
+                onClick={() => setActiveTab(tab.props.id)}
+            >
+                {tab.props.title}
+            </TabControl>
+        );
     });
 
     return (
         <TabsWrapper>
-            <TabsControlWrapper>{getTabControls}</TabsControlWrapper>
-            <TabsContentWrapper>{getTabs}</TabsContentWrapper>
+            <TabsControlWrapper>{createTabControls}</TabsControlWrapper>
+            <TabsContentWrapper>{createTabs}</TabsContentWrapper>
         </TabsWrapper>
     );
 };
