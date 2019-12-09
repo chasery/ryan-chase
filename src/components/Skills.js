@@ -46,6 +46,27 @@ const IconWrapper = styled.div`
     width: 1.5rem;
 `;
 
+const determineIcon = (name) => {
+    switch(name) {
+        case 'Html5Icon':
+            return <Html5Icon />;
+        default:
+            return <></>;
+    }
+}
+
+const skills = [
+    {
+        id: '',
+        title: '',
+        description: '',
+        subHeading: '',
+        skills: [{
+            iconName: 'Html5Icon'
+        }]
+    }
+]
+
 const Skills = props => {
     return (
         <Section id={props.id}>
@@ -64,7 +85,8 @@ const Skills = props => {
                     <SkillsList>
                         <li>
                             <IconWrapper>
-                                <Html5Icon />
+                                {determineIcon(skill.iconName)}
+                                {/* <Html5Icon /> */}
                             </IconWrapper>
                             HTML 5
                         </li>
