@@ -1,25 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { determineIcon } from "./icons.js";
 
-import Section from "./shared/Section";
-import Tabs from "./shared/Tabs";
-
-import { ReactComponent as Html5Icon } from "../assets/svg/front-end/html-5.svg";
-import { ReactComponent as Css3Icon } from "../assets/svg/front-end/css-3.svg";
-import { ReactComponent as JavaScriptIcon } from "../assets/svg/front-end/javascript.svg";
-import { ReactComponent as GitIcon } from "../assets/svg/front-end/git.svg";
-import { ReactComponent as ReactIcon } from "../assets/svg/front-end/react.svg";
-import { ReactComponent as ReduxIcon } from "../assets/svg/front-end/redux.svg";
-import { ReactComponent as StyledComponentsIcon } from "../assets/svg/front-end/styled-components.svg";
-
-import { ReactComponent as StoryboardingIcon } from "../assets/svg/user-experience/storyboarding.svg";
-import { ReactComponent as PersonasIcon } from "../assets/svg/user-experience/personas.svg";
-import { ReactComponent as JourneyMappingIcon } from "../assets/svg/user-experience/journey-mapping.svg";
-import { ReactComponent as UserFlowsIcon } from "../assets/svg/user-experience/user-flows.svg";
-import { ReactComponent as WireframingIcon } from "../assets/svg/user-experience/wireframing.svg";
-import { ReactComponent as RapidPrototypingIcon } from "../assets/svg/user-experience/rapid-prototyping.svg";
-import { ReactComponent as UserTestingIcon } from "../assets/svg/user-experience/user-testing.svg";
-import { ReactComponent as DesignSystemsIcon } from "../assets/svg/user-experience/design-systems.svg";
+import Section from "../shared/Section";
+import Tabs from "../shared/Tabs";
 
 const SkillsList = styled.ul`
     display: grid;
@@ -124,43 +108,6 @@ const skills = [
         ]
     }
 ];
-
-const determineIcon = name => {
-    switch (name) {
-        case "Html5Icon":
-            return <Html5Icon />;
-        case "Css3Icon":
-            return <Css3Icon />;
-        case "JavaScriptIcon":
-            return <JavaScriptIcon />;
-        case "GitIcon":
-            return <GitIcon />;
-        case "ReactIcon":
-            return <ReactIcon />;
-        case "ReduxIcon":
-            return <ReduxIcon />;
-        case "StyledComponentsIcon":
-            return <StyledComponentsIcon />;
-        case "StoryboardingIcon":
-            return <StoryboardingIcon />;
-        case "PersonasIcon":
-            return <PersonasIcon />;
-        case "JourneyMappingIcon":
-            return <JourneyMappingIcon />;
-        case "UserFlowsIcon":
-            return <UserFlowsIcon />;
-        case "WireframingIcon":
-            return <WireframingIcon />;
-        case "RapidPrototypingIcon":
-            return <RapidPrototypingIcon />;
-        case "UserTestingIcon":
-            return <UserTestingIcon />;
-        case "DesignSystemsIcon":
-            return <DesignSystemsIcon />;
-        default:
-            return <></>;
-    }
-};
 
 const createTabs = skills.map(tab => {
     const skillsList = tab.skills.map(skill => {
