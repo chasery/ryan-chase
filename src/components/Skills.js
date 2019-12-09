@@ -11,10 +11,8 @@ import { ReactComponent as GitIcon } from "../assets/svg/front-end/git.svg";
 import { ReactComponent as ReactIcon } from "../assets/svg/front-end/react.svg";
 import { ReactComponent as ReduxIcon } from "../assets/svg/front-end/redux.svg";
 import { ReactComponent as StyledComponentsIcon } from "../assets/svg/front-end/styled-components.svg";
-import { ReactComponent as JestIcon } from "../assets/svg/front-end/jest.svg";
-import { ReactComponent as AngularIcon } from "../assets/svg/front-end/angular.svg";
 
-import { ReactComponent as StoryboradingIcon } from "../assets/svg/user-experience/storyboarding.svg";
+import { ReactComponent as StoryboardingIcon } from "../assets/svg/user-experience/storyboarding.svg";
 import { ReactComponent as PersonasIcon } from "../assets/svg/user-experience/personas.svg";
 import { ReactComponent as JourneyMappingIcon } from "../assets/svg/user-experience/journey-mapping.svg";
 import { ReactComponent as UserFlowsIcon } from "../assets/svg/user-experience/user-flows.svg";
@@ -46,164 +44,151 @@ const IconWrapper = styled.div`
     width: 1.5rem;
 `;
 
-const determineIcon = (name) => {
-    switch(name) {
-        case 'Html5Icon':
+const skills = [
+    {
+        id: "1",
+        title: "Front-End Development",
+        description:
+            "Ryan currently works as a senior UX Designer, where he leads a team that drives an empathic approach to software. His background in design and development fosters a collaborative environment between the two groups, resulting in the creation of the best product possible.",
+        subHeading: "Languages & Frameworks",
+        skills: [
+            {
+                name: "HTML 5",
+                iconName: "Html5Icon"
+            },
+            {
+                name: "CSS 3",
+                iconName: "Css3Icon"
+            },
+            {
+                name: "JavaScript",
+                iconName: "JavaScriptIcon"
+            },
+            {
+                name: "Git",
+                iconName: "GitIcon"
+            },
+            {
+                name: "React",
+                iconName: "ReactIcon"
+            },
+            {
+                name: "Redux",
+                iconName: "ReduxIcon"
+            },
+            {
+                name: "Styled-Components",
+                iconName: "StyledComponentsIcon"
+            }
+        ]
+    },
+    {
+        id: "2",
+        title: "User Experience",
+        description:
+            "It’s that goal of finding the perfect solution for his end users’, that motivates Ryan. Staying in tune with the latest software trends, he actively searches for ways to employ modern approaches to his user centric solutions. Ryan is very passionate about usability and you shouldn’t be surprised if you hear him exclaiming “That’s a bad user experience!”",
+        subHeading: "Process",
+        skills: [
+            {
+                name: "Storyboarding",
+                iconName: "StoryboardingIcon"
+            },
+            {
+                name: "Personas",
+                iconName: "PersonasIcon"
+            },
+            {
+                name: "Journey Mapping",
+                iconName: "JourneyMappingIcon"
+            },
+            {
+                name: "User Flows",
+                iconName: "UserFlowsIcon"
+            },
+            {
+                name: "Wireframing",
+                iconName: "WireframingIcon"
+            },
+            {
+                name: "Rapid Prototyping",
+                iconName: "RapidPrototypingIcon"
+            },
+            {
+                name: "User Testing",
+                iconName: "UserTestingIcon"
+            },
+            {
+                name: "Design Systems",
+                iconName: "DesignSystemsIcon"
+            }
+        ]
+    }
+];
+
+const determineIcon = name => {
+    switch (name) {
+        case "Html5Icon":
             return <Html5Icon />;
+        case "Css3Icon":
+            return <Css3Icon />;
+        case "JavaScriptIcon":
+            return <JavaScriptIcon />;
+        case "GitIcon":
+            return <GitIcon />;
+        case "ReactIcon":
+            return <ReactIcon />;
+        case "ReduxIcon":
+            return <ReduxIcon />;
+        case "StyledComponentsIcon":
+            return <StyledComponentsIcon />;
+        case "StoryboardingIcon":
+            return <StoryboardingIcon />;
+        case "PersonasIcon":
+            return <PersonasIcon />;
+        case "JourneyMappingIcon":
+            return <JourneyMappingIcon />;
+        case "UserFlowsIcon":
+            return <UserFlowsIcon />;
+        case "WireframingIcon":
+            return <WireframingIcon />;
+        case "RapidPrototypingIcon":
+            return <RapidPrototypingIcon />;
+        case "UserTestingIcon":
+            return <UserTestingIcon />;
+        case "DesignSystemsIcon":
+            return <DesignSystemsIcon />;
         default:
             return <></>;
     }
-}
+};
 
-const skills = [
-    {
-        id: '',
-        title: '',
-        description: '',
-        subHeading: '',
-        skills: [{
-            iconName: 'Html5Icon'
-        }]
-    }
-]
+const createTabs = skills.map(tab => {
+    const skillsList = tab.skills.map(skill => {
+        return (
+            <li>
+                <IconWrapper>{determineIcon(skill.iconName)}</IconWrapper>
+                {skill.name}
+            </li>
+        );
+    });
+
+    return (
+        <div
+            key={tab.id}
+            id={tab.id}
+            title={tab.title}
+            description={tab.description}
+            subHeading={tab.subHeading}
+        >
+            <SkillsList>{skillsList}</SkillsList>
+        </div>
+    );
+});
 
 const Skills = props => {
     return (
         <Section id={props.id}>
-            <Tabs>
-                <div
-                    id="1"
-                    title="Front-End Development"
-                    description="Ryan currently works as a senior UX Designer, where he
-                        leads a team that drives an empathic approach to
-                        software. His background in design and development
-                        fosters a collaborative environment between the two
-                        groups, resulting in the creation of the best product
-                        possible."
-                    subHeading="Languages & Frameworks"
-                >
-                    <SkillsList>
-                        <li>
-                            <IconWrapper>
-                                {determineIcon(skill.iconName)}
-                                {/* <Html5Icon /> */}
-                            </IconWrapper>
-                            HTML 5
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <Css3Icon />
-                            </IconWrapper>
-                            CSS 3
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <JavaScriptIcon />
-                            </IconWrapper>
-                            JavaScript
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <GitIcon />
-                            </IconWrapper>
-                            Git
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <ReactIcon />
-                            </IconWrapper>
-                            React
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <ReduxIcon />
-                            </IconWrapper>
-                            Redux
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <StyledComponentsIcon />
-                            </IconWrapper>
-                            Styled-Components
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <JestIcon />
-                            </IconWrapper>
-                            Jest
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <AngularIcon />
-                            </IconWrapper>
-                            Angular
-                        </li>
-                    </SkillsList>
-                </div>
-                <div
-                    id="2"
-                    title="User Experience"
-                    description="It’s that goal of finding the perfect solution for his
-                    end users’, that motivates Ryan. Staying in tune with
-                    the latest software trends, he actively searches for
-                    ways to employ modern approaches to his user centric
-                    solutions. Ryan is very passionate about usability and
-                    you shouldn’t be surprised if you hear him exclaiming
-                    “That’s a bad user experience!”"
-                    subHeading="Process"
-                >
-                    <SkillsList>
-                        <li>
-                            <IconWrapper>
-                                <StoryboradingIcon />
-                            </IconWrapper>
-                            Storyboarding
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <PersonasIcon />
-                            </IconWrapper>
-                            Personas
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <JourneyMappingIcon />
-                            </IconWrapper>
-                            Journey Mapping
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <UserFlowsIcon />
-                            </IconWrapper>
-                            User Flows
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <WireframingIcon />
-                            </IconWrapper>
-                            Wireframing
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <RapidPrototypingIcon />
-                            </IconWrapper>
-                            Rapid Prototyping
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <UserTestingIcon />
-                            </IconWrapper>
-                            User Testing
-                        </li>
-                        <li>
-                            <IconWrapper>
-                                <DesignSystemsIcon />
-                            </IconWrapper>
-                            Design Systems
-                        </li>
-                    </SkillsList>
-                </div>
-            </Tabs>
+            <Tabs>{createTabs}</Tabs>
         </Section>
     );
 };
