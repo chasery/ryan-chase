@@ -49,10 +49,6 @@ const skills = [
                 iconName: "JavaScriptIcon"
             },
             {
-                name: "Git",
-                iconName: "GitIcon"
-            },
-            {
                 name: "React",
                 iconName: "ReactIcon"
             },
@@ -63,6 +59,10 @@ const skills = [
             {
                 name: "Styled-Components",
                 iconName: "StyledComponentsIcon"
+            },
+            {
+                name: "Git",
+                iconName: "GitIcon"
             }
         ]
     },

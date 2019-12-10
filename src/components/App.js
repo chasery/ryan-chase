@@ -2,7 +2,7 @@ import React from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import styledNormalize from "styled-normalize";
 
-import Header from "./Header/Header";
+import Header from "./Header";
 import Hero from "./Hero";
 import About from "./About";
 import Skills from "./Skills";
