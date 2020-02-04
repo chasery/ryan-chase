@@ -32,12 +32,15 @@ const TabControl = styled.button`
     }
 `;
 const Tab = styled.div`
-    height: 0;
+    max-height: 0;
     opacity: 0;
+    overflow: hidden;
+    ${props => props.theme.animation}
 
     &[class*="active"] {
-        height: auto;
+        max-height: initial;
         opacity: 1;
+        ${props => props.theme.animation}
     }
 `;
 const TabDescription = styled.p``;
@@ -67,7 +70,6 @@ const Tabs = props => {
     });
 
     const createTabControls = createTabs.map(tab => {
-        console.log(tab);
         return (
             <TabControl
                 key={tab.props.id}

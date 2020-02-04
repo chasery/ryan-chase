@@ -46,7 +46,11 @@ const theme = {
     breakLrg: "75rem",
     contentSm: "100%",
     contentMed: "60rem",
-    contentLrg: "71.25rem"
+    contentLrg: "71.25rem",
+
+    // Default animation
+    animation:
+        "-webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -ms-transition: all 0.5s; transition: all 0.5s;"
 };
 
 const AppWrapper = styled.div`

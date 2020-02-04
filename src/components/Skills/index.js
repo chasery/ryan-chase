@@ -110,9 +110,9 @@ const skills = [
 ];
 
 const createTabs = skills.map(tab => {
-    const skillsList = tab.skills.map(skill => {
+    const skillsList = tab.skills.map((skill, index) => {
         return (
-            <li>
+            <li key={index}>
                 <IconWrapper>{determineIcon(skill.iconName)}</IconWrapper>
                 {skill.name}
             </li>
