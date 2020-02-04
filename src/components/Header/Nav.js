@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 import useWindowSize from "../../hooks/useWindowSize";
 import NavControl from "./NavControl";
-import { ReactComponent as Logo } from "./svg/ryan-chase-logo.svg";
-import { ReactComponent as MenuIcon } from "./svg/menu.svg";
-import { ReactComponent as CloseIcon } from "./svg/close.svg";
-import { ReactComponent as EmailIcon } from "./svg/email.svg";
-import { ReactComponent as GithubIcon } from "./svg/github.svg";
-import { ReactComponent as LinkedInIcon } from "./svg/linkedin.svg";
+import { ReactComponent as Logo } from "../../assets/svg/header/ryan-chase-logo.svg";
+import { ReactComponent as MenuIcon } from "../../assets/svg/header/menu.svg";
+import { ReactComponent as CloseIcon } from "../../assets/svg/header/close.svg";
+import { ReactComponent as EmailIcon } from "../../assets/svg/header/email.svg";
+import { ReactComponent as GithubIcon } from "../../assets/svg/header/github.svg";
+import { ReactComponent as LinkedInIcon } from "../../assets/svg/header/linkedin.svg";
 
 const NavWrapper = styled.div`
     display: flex;

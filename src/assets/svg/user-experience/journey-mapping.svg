@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>journey-mapping</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-187.000000, -1999.000000)" fill="#50E3C2" fill-rule="nonzero" id="Skills">
+            <g transform="translate(0.000000, 1612.000000)">
+                <g id="Tools-Grouping" transform="translate(182.000000, 345.000000)">
+                    <g id="Left-Icons">
+                        <path d="M12,42 C8.134,42 5,45.134 5,49 C5,54 12,62 12,62 C12,62 19,54 19,49 C19,45.134 15.866,42 12,42 Z M12,51.5 C10.619,51.5 9.5,50.381 9.5,49 C9.5,47.619 10.619,46.5 12,46.5 C13.381,46.5 14.5,47.619 14.5,49 C14.5,50.381 13.381,51.5 12,51.5 Z" id="journey-mapping"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

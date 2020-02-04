@@ -2,7 +2,7 @@ import React from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import styledNormalize from "styled-normalize";
 
-import Header from "./Header/Header";
+import Header from "./Header";
 import Hero from "./Hero";
 import About from "./About";
 import Skills from "./Skills";
@@ -46,7 +46,11 @@ const theme = {
     breakLrg: "75rem",
     contentSm: "100%",
     contentMed: "60rem",
-    contentLrg: "71.25rem"
+    contentLrg: "71.25rem",
+
+    // Default animation
+    animation:
+        "-webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -ms-transition: all 0.5s; transition: all 0.5s;"
 };
 
 const AppWrapper = styled.div`
@@ -63,7 +67,7 @@ const App = () => {
                 <Hero id="Hero" />
                 <About id="About" />
                 <Skills id="Skills" />
-                <Portfolio id="Portfolio" />
+                {/* <Portfolio id="Portfolio" /> */}
             </AppWrapper>
         </ThemeProvider>
     );

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>user-testing</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-936.000000, -2002.000000)" fill="#50E3C2" fill-rule="nonzero" id="Skills">
+            <g transform="translate(0.000000, 1612.000000)">
+                <g id="Tools-Grouping" transform="translate(182.000000, 345.000000)">
+                    <g id="Right-Icons" transform="translate(751.000000, 2.000000)">
+                        <path d="M8,43 L8,45 L9,45 L9,50 L3,58.365234 L3,61 L21,61 L21,58.365234 L15,50 L15,45 L16,45 L16,43 L8,43 Z M11,45 L13,45 L13,50 L11,50 L11,45 Z M13,53 C13.552,53 14,53.448 14,54 C14,54.552 13.552,55 13,55 C12.448,55 12,54.552 12,54 C12,53.448 12.448,53 13,53 Z M9.5,56 C10.328,56 11,56.672 11,57.5 C11,58.328 10.328,59 9.5,59 C8.672,59 8,58.328 8,57.5 C8,56.672 8.672,56 9.5,56 Z" id="user-testing"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

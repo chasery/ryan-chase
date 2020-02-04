@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="20px" viewBox="0 0 16 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>storyboarding</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-186.000000, -1959.000000)" fill="#50E3C2" fill-rule="nonzero" id="Skills">
+            <g transform="translate(0.000000, 1612.000000)">
+                <g id="Tools-Grouping" transform="translate(182.000000, 345.000000)">
+                    <g id="Left-Icons">
+                        <path d="M6,2 C4.895,2 4,2.895 4,4 L4,19 C4,20.64497 5.3550302,22 7,22 L20,22 L20,20 L7,20 C6.4349698,20 6,19.56503 6,19 C6,18.43497 6.4349698,18 7,18 L20,18 L20,17 L20,16 L20,2 L16,2 L16,12 L13,10 L10,12 L10,2 L6,2 Z" id="storyboarding"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
